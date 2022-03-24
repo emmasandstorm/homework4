@@ -1,12 +1,13 @@
 from flask import Flask
 
-myapp_obj = Flask(__name__)
+myobj = Flask(__name__)
 
-@myapp_obj.route("/")
+name = {'name':'Carlos'}
+city_names = ['Paris', 'New york', 'Tokyo', 'Livermore']
+
+@myobj.route("/")
 def home():
-        name = {'name':'Carlos'}
-        city_names = ['Paris', 'New york', 'Tokyo', 'Livermore']
-        return'''
+	return'''
 	<html>
 		<head>
 		<h1> Welcome '''+name['name']+'''!</h1> </head>
@@ -21,4 +22,4 @@ def home():
 	</html> '''
 
 if __name__ == '__main__':
-        myapp_obj.run()
+        myobj.run()
